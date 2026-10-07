@@ -422,6 +422,20 @@ blockquote cite {
 .rsvp-note, .rsvp-status { margin: 18px 0 0; color: rgba(17, 17, 15, .68); font-size: 9px; line-height: 1.4; }
 .rsvp-status { color: var(--ink); font-size: 11px; }
 
+.scroll-reveal-enabled .scroll-reveal {
+  transition:
+    opacity 650ms ease var(--reveal-delay, 0ms),
+    transform 650ms cubic-bezier(.2, .65, .3, 1) var(--reveal-delay, 0ms);
+}
+.scroll-reveal-enabled .scroll-reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.scroll-reveal-enabled .scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 599px) {
   .mobile-break { display: initial; }
   .event-address span:first-child { margin-right: 10px; }
@@ -458,5 +472,12 @@ blockquote cite {
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; }
+  .scroll-reveal-enabled .scroll-reveal,
+  .scroll-reveal-enabled .scroll-reveal:not(.is-visible),
+  .scroll-reveal-enabled .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 

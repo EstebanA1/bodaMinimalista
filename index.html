@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&family=Parisienne&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=rsvp-form-5" />
-    <script src="script.js?v=rsvp-interaction-5" defer></script>
+    <link rel="stylesheet" href="styles.css?v=scroll-reveal-6" />
+    <script src="script.js?v=scroll-reveal-6" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Ir al contenido</a>
@@ -18,15 +18,15 @@
     <main id="contenido">
       <section class="invitation-cover" id="inicio" aria-label="Invitación">
         <header class="welcome">
-          <img class="welcome-logo" src="assets/logo-bienvenida.jpg" alt="Monograma J y F con ramas ilustradas" />
-          <div class="welcome-copy">
+          <img class="welcome-logo scroll-reveal" data-reveal-delay="0" src="assets/logo-bienvenida.jpg" alt="Monograma J y F con ramas ilustradas" />
+          <div class="welcome-copy scroll-reveal" data-reveal-delay="100">
             <p>ESTAS INVITADO A</p>
             <h1>Nuestra Boda</h1>
           </div>
         </header>
 
         <section class="quote-section" aria-label="Una cita sobre el amor">
-          <blockquote>
+          <blockquote class="scroll-reveal" data-reveal-delay="80">
             El amor es paciente, es bondadoso, el amor<br class="mobile-break" />
             no es envidioso ni jactancioso ni orgulloso, no<br class="mobile-break" />
             se comporta con rudeza, no es egoísta, no se<br class="mobile-break" />
@@ -34,7 +34,7 @@
             <cite>Corintios <span class="numeric">13:4-5</span></cite>
           </blockquote>
 
-          <div class="mini-player" aria-label="Reproductor de canciones">
+          <div class="mini-player scroll-reveal" data-reveal-delay="140" aria-label="Reproductor de canciones">
             <p class="player-label">ESCUCHA NUESTRA CANCIÓN</p>
             <div class="mini-player-controls" role="group" aria-label="Controles de música">
               <button class="mini-control favorite-control" id="favorite-toggle" type="button" aria-label="Guardar canción en favoritos" aria-pressed="false">
@@ -71,10 +71,10 @@
       </section>
 
       <section class="reference-page event-page" id="celebracion" aria-labelledby="event-title">
-        <img class="small-logo page-logo-left" src="assets/logo-bienvenida-compacto.png" alt="Monograma J y F" />
-        <h2 class="page-heading" id="event-title">CEREMONIA Y RECEPCIÓN</h2>
+        <img class="small-logo page-logo-left scroll-reveal" data-reveal-delay="0" src="assets/logo-bienvenida-compacto.png" alt="Monograma J y F" />
+        <h2 class="page-heading scroll-reveal" data-reveal-delay="70" id="event-title">CEREMONIA Y RECEPCIÓN</h2>
 
-        <div class="event-layout">
+        <div class="event-layout scroll-reveal" data-reveal-delay="120">
           <img class="venue-image" src="assets/imagen-decorativa.png" alt="Ilustración del salón de la recepción" loading="lazy" />
           <div class="event-copy">
             <p class="event-time">HORA: <span class="numeric">13:00</span> HRS</p>
@@ -84,22 +84,22 @@
           </div>
         </div>
 
-        <h2 class="itinerary-title" id="itinerario">ITINERARIO</h2>
+        <h2 class="itinerary-title scroll-reveal" data-reveal-delay="50" id="itinerario">ITINERARIO</h2>
         <div class="timeline">
           <div class="timeline-rail" aria-hidden="true"></div>
-          <article class="timeline-item">
+          <article class="timeline-item scroll-reveal" data-reveal-delay="0">
             <p class="timeline-label">CEREMONIA</p>
             <span class="timeline-dot" aria-hidden="true"></span>
             <p class="timeline-time"><span class="numeric">13:00</span> hrs</p>
             <img src="assets/anillos.png" alt="" width="64" height="57" loading="lazy" />
           </article>
-          <article class="timeline-item">
+          <article class="timeline-item scroll-reveal" data-reveal-delay="90">
             <p class="timeline-label">BRINDIS</p>
             <span class="timeline-dot" aria-hidden="true"></span>
             <p class="timeline-time"><span class="numeric">14:00</span> hrs</p>
             <img src="assets/copas-brindis.png?v=itinerary-2" alt="" width="68" height="46" loading="lazy" />
           </article>
-          <article class="timeline-item">
+          <article class="timeline-item scroll-reveal" data-reveal-delay="180">
             <p class="timeline-label">TERMINO</p>
             <span class="timeline-dot" aria-hidden="true"></span>
             <p class="timeline-time"><span class="numeric">00:00</span> hrs</p>
@@ -109,14 +109,14 @@
       </section>
 
       <section class="reference-page dress-gift-page" id="vestimenta" aria-label="Vestimenta y mesa de regalos">
-        <h2 class="dress-title">DRESS CODE</h2>
-        <p class="dress-style">ELEGANTE</p>
-        <p class="dress-note">NO utilizar blanco, ni color<br />parecido como el crema o beige</p>
-        <img class="dress-image" src="assets/dresscode.png" alt="Ilustración de vestimenta formal" width="79" height="101" loading="lazy" />
+        <h2 class="dress-title scroll-reveal" data-reveal-delay="0">DRESS CODE</h2>
+        <p class="dress-style scroll-reveal" data-reveal-delay="60">ELEGANTE</p>
+        <p class="dress-note scroll-reveal" data-reveal-delay="90">NO utilizar blanco, ni color<br />parecido como el crema o beige</p>
+        <img class="dress-image scroll-reveal" data-reveal-delay="130" src="assets/dresscode.png" alt="Ilustración de vestimenta formal" width="79" height="101" loading="lazy" />
 
-        <h2 class="gift-title">MESA DE REGALOS</h2>
-        <p class="gift-copy">Nuestro mejor regalo es tu presencia en este momento importante, pero si deseas contribuir a nuestro proyecto de vida, lo apreciaremos.</p>
-        <div class="bank-details" role="group" aria-label="Datos para mesa de regalos">
+        <h2 class="gift-title scroll-reveal" data-reveal-delay="60">MESA DE REGALOS</h2>
+        <p class="gift-copy scroll-reveal" data-reveal-delay="90">Nuestro mejor regalo es tu presencia en este momento importante, pero si deseas contribuir a nuestro proyecto de vida, lo apreciaremos.</p>
+        <div class="bank-details scroll-reveal" data-reveal-delay="130" role="group" aria-label="Datos para mesa de regalos">
           <p class="bank-heading">CUENTA BANCARIA</p>
           <p class="bank-account bank-account-first">N. cta BCP<br /><span class="numeric">1945678912345</span><br />CCI <span class="numeric">00219456789123456789</span></p>
           <p class="bank-account bank-account-second">N. cta BBVA<br /><span class="numeric">0011-0150-0200055207</span><br />CCI <span class="numeric">01101500002000552070</span></p>
@@ -124,25 +124,25 @@
       </section>
 
       <section class="reference-page consideration-page" id="confirmacion" aria-label="Información y confirmación de asistencia">
-        <img class="small-logo page-logo-right" src="assets/logo-bienvenida-compacto.png" alt="Monograma J y F" />
+        <img class="small-logo page-logo-right scroll-reveal" data-reveal-delay="0" src="assets/logo-bienvenida-compacto.png" alt="Monograma J y F" />
         <div class="consideration-copy">
-          <h2>TOMALO EN CUENTA</h2>
-          <p class="children-heading">SI A LOS NIÑOS. SI A LAS RISAS. SI A LA FIESTA EN FAMILIA</p>
-          <p class="children-copy">Porque nuestros hijos y los vuestros son parte de esta historia, queremos que todos disfruten con nosotros.</p>
+          <h2 class="scroll-reveal" data-reveal-delay="40">TOMALO EN CUENTA</h2>
+          <p class="children-heading scroll-reveal" data-reveal-delay="80">SI A LOS NIÑOS. SI A LAS RISAS. SI A LA FIESTA EN FAMILIA</p>
+          <p class="children-copy scroll-reveal" data-reveal-delay="110">Porque nuestros hijos y los vuestros son parte de esta historia, queremos que todos disfruten con nosotros.</p>
 
-          <h2 class="confirm-title">CONFIRMAR ASISTENCIA</h2>
-          <p class="confirm-copy">Este es un día especial para nosotros y más aún si estás presente, por eso te pedimos que nos hagas saber si asistirás con previo aviso.<br />Hasta el <span class="numeric">1</span> de Diciembre puedes confirmar tu asistencia mediante este formulario:</p>
-          <p class="closing-line">¡¡Te esperamos!!</p>
+          <h2 class="confirm-title scroll-reveal" data-reveal-delay="70">CONFIRMAR ASISTENCIA</h2>
+          <p class="confirm-copy scroll-reveal" data-reveal-delay="100">Este es un día especial para nosotros y más aún si estás presente, por eso te pedimos que nos hagas saber si asistirás con previo aviso.<br />Hasta el <span class="numeric">1</span> de Diciembre puedes confirmar tu asistencia mediante este formulario:</p>
+          <p class="closing-line scroll-reveal" data-reveal-delay="130">¡¡Te esperamos!!</p>
 
           <form class="rsvp-form" id="rsvp-form">
-            <p class="rsvp-intro">Nos encantará compartir este día contigo. Cuéntanos si podrás venir y así dejamos todo preparado.</p>
+            <p class="rsvp-intro scroll-reveal" data-reveal-delay="0">Nos encantará compartir este día contigo. Cuéntanos si podrás venir y así dejamos todo preparado.</p>
 
-            <div class="rsvp-field">
+            <div class="rsvp-field scroll-reveal" data-reveal-delay="50">
               <label for="rsvp-name">Tu nombre y apellido <span aria-hidden="true">*</span></label>
               <input id="rsvp-name" name="name" type="text" autocomplete="name" placeholder="Nombre y apellido" required />
             </div>
 
-            <fieldset class="rsvp-attendance">
+            <fieldset class="rsvp-attendance scroll-reveal" data-reveal-delay="80">
               <legend>¿Podrás acompañarnos? <span aria-hidden="true">*</span></legend>
               <div class="rsvp-options">
                 <label class="rsvp-choice"><input type="radio" name="attendance" value="yes" required /><span>Sí, ahí estaré</span></label>
@@ -150,7 +150,7 @@
               </div>
             </fieldset>
 
-            <div class="rsvp-details" id="rsvp-guest-details" aria-disabled="true">
+            <div class="rsvp-details scroll-reveal" data-reveal-delay="110" id="rsvp-guest-details" aria-disabled="true">
               <div class="rsvp-field">
                 <label for="rsvp-count">¿Cuántas personas asistirán?</label>
                 <select id="rsvp-count" name="guestCount" disabled>
@@ -171,13 +171,13 @@
               </div>
             </div>
 
-            <div class="rsvp-field rsvp-comment-field">
+            <div class="rsvp-field rsvp-comment-field scroll-reveal" data-reveal-delay="70">
               <label for="rsvp-comment">Comentario (opcional)</label>
               <textarea id="rsvp-comment" name="comment" rows="4" placeholder="Si quieres dejarnos unas palabras..."></textarea>
             </div>
 
-            <button class="rsvp-submit" type="submit">Enviar respuesta <span aria-hidden="true">↗</span></button>
-            <p class="rsvp-note">Usaremos estos datos solo para organizar la celebración.</p>
+            <button class="rsvp-submit scroll-reveal" data-reveal-delay="100" type="submit">Enviar respuesta <span aria-hidden="true">↗</span></button>
+            <p class="rsvp-note scroll-reveal" data-reveal-delay="130">Usaremos estos datos solo para organizar la celebración.</p>
             <p class="rsvp-status" id="rsvp-status" role="status" aria-live="polite" hidden></p>
           </form>
         </div>

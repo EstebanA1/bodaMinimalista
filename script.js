@@ -210,3 +210,29 @@ if (rsvpForm) {
   });
 }
 
+const revealItems = [...document.querySelectorAll(".scroll-reveal")];
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (revealItems.length && !reduceMotion && "IntersectionObserver" in window) {
+  document.documentElement.classList.add("scroll-reveal-enabled");
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {
+    rootMargin: "0px 0px -36px 0px",
+    threshold: 0.12,
+  });
+
+  revealItems.forEach((item) => {
+    const delay = Number(item.dataset.revealDelay);
+    if (delay) item.style.setProperty("--reveal-delay", `${delay}ms`);
+    revealObserver.observe(item);
+  });
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
