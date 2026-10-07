@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <meta name="description" content="Estás invitado a la boda de Juliana y Felipe." />
+    <title>Juliana &amp; Felipe — Nuestra Boda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&family=Parisienne&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=rsvp-form-5" />
+    <script src="script.js?v=rsvp-interaction-5" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+    <main id="contenido">
+      <section class="invitation-cover" id="inicio" aria-label="Invitación">
+        <header class="welcome">
+          <img class="welcome-logo" src="assets/logo-bienvenida.jpg" alt="Monograma J y F con ramas ilustradas" />
+          <div class="welcome-copy">
+            <p>ESTAS INVITADO A</p>
+            <h1>Nuestra Boda</h1>
+          </div>
+        </header>
+
+        <section class="quote-section" aria-label="Una cita sobre el amor">
+          <blockquote>
+            El amor es paciente, es bondadoso, el amor<br class="mobile-break" />
+            no es envidioso ni jactancioso ni orgulloso, no<br class="mobile-break" />
+            se comporta con rudeza, no es egoísta, no se<br class="mobile-break" />
+            enoja fácilmente, no guarda rencor.
+            <cite>Corintios <span class="numeric">13:4-5</span></cite>
+          </blockquote>
+
+          <div class="mini-player" aria-label="Reproductor de canciones">
+            <p class="player-label">ESCUCHA NUESTRA CANCIÓN</p>
+            <div class="mini-player-controls" role="group" aria-label="Controles de música">
+              <button class="mini-control favorite-control" id="favorite-toggle" type="button" aria-label="Guardar canción en favoritos" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 4.3-8.8 10.2-8.8 10.2S3.2 13.1 3.2 8.8A4.3 4.3 0 0 1 12 6.7a4.3 4.3 0 0 1 8.8 2.1Z" /></svg>
+              </button>
+              <button class="mini-control" id="previous-track" type="button" aria-label="Canción anterior">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M19 6l-9 6 9 6z" /></svg>
+              </button>
+              <button class="mini-control main-play-control" id="audio-toggle" type="button" aria-label="Reproducir Clair de Lune" aria-pressed="false" data-playing="false">
+                <svg class="mini-play-icon" id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z" /></svg>
+                <svg class="mini-play-icon" id="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zm6 0h4v14h-4z" /></svg>
+              </button>
+              <button class="mini-control" id="next-track" type="button" aria-label="Canción siguiente">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M5 6l9 6-9 6z" /></svg>
+              </button>
+              <button class="mini-control playlist-control" id="playlist-toggle" type="button" aria-label="Ver canciones" aria-expanded="false" aria-controls="track-list">
+                <svg class="playlist-plus-icon" id="playlist-plus-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 8v8M8 12h8" /></svg>
+                <svg class="playlist-close-icon" id="playlist-close-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><circle cx="12" cy="12" r="8.5" /><path d="M8 12h8" /></svg>
+              </button>
+            </div>
+            <p class="current-track visually-hidden" aria-live="off"><span id="track-title">Clair de Lune</span><span> · </span><span id="track-composer">Claude Debussy</span></p>
+            <div class="track-list" id="track-list" aria-label="Lista de canciones" hidden>
+              <button class="track-option" type="button" data-track-index="0"><span>Clair de Lune</span><small>Claude Debussy</small></button>
+              <button class="track-option" type="button" data-track-index="1"><span>Gymnopédie No. <span class="numeric">1</span></span><small>Erik Satie</small></button>
+              <button class="track-option" type="button" data-track-index="2"><span>Nocturno op. <span class="numeric">9</span> n.º <span class="numeric">2</span></span><small>Frédéric Chopin</small></button>
+            </div>
+            <p class="player-status visually-hidden" id="player-status" role="status" aria-live="polite">Toca reproducir.</p>
+          </div>
+
+          <audio class="audio-engine" id="wedding-audio" preload="metadata" playsinline aria-label="Pista de música de la invitación">
+            <source id="audio-source" src="assets/clair-de-lune.mp3" type="audio/mpeg" />
+          </audio>
+        </section>
+      </section>
+
+      <section class="reference-page event-page" id="celebracion" aria-labelledby="event-title">
+        <img class="small-logo page-logo-left" src="assets/logo-bienvenida-compacto.png" alt="Monograma J y F" />
+        <h2 class="page-heading" id="event-title">CEREMONIA Y RECEPCIÓN</h2>
+
+        <div class="event-layout">
+          <img class="venue-image" src="assets/imagen-decorativa.png" alt="Ilustración del salón de la recepción" loading="lazy" />
+          <div class="event-copy">
+            <p class="event-time">HORA: <span class="numeric">13:00</span> HRS</p>
+            <p class="venue-name">CASA PLAYA MAULE<br /><span>“Bután Azul Pacífico”</span></p>
+            <p class="event-address"><span>Sector Maule</span><span>Las Encinas <span class="numeric">80</span>,</span><br /><span class="numeric">4200264</span> Coronel, Bio Bio</p>
+            <a class="map-link" href="https://maps.google.com/?q=Casa+Playa+Maule+Butan+Azul+Pacifico+Las+Encinas+80+Coronel+Chile" target="_blank" rel="noopener noreferrer">VER UBICACIÓN</a>
+          </div>
+        </div>
+
+        <h2 class="itinerary-title" id="itinerario">ITINERARIO</h2>
+        <div class="timeline">
+          <div class="timeline-rail" aria-hidden="true"></div>
+          <article class="timeline-item">
+            <p class="timeline-label">CEREMONIA</p>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-time"><span class="numeric">13:00</span> hrs</p>
+            <img src="assets/anillos.png" alt="" width="64" height="57" loading="lazy" />
+          </article>
+          <article class="timeline-item">
+            <p class="timeline-label">BRINDIS</p>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-time"><span class="numeric">14:00</span> hrs</p>
+            <img src="assets/copas-brindis.png?v=itinerary-2" alt="" width="68" height="46" loading="lazy" />
+          </article>
+          <article class="timeline-item">
+            <p class="timeline-label">TERMINO</p>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-time"><span class="numeric">00:00</span> hrs</p>
+            <img src="assets/carabana-casados.png?v=itinerary-2" alt="" width="61" height="56" loading="lazy" />
+          </article>
+        </div>
+      </section>
+
+      <section class="reference-page dress-gift-page" id="vestimenta" aria-label="Vestimenta y mesa de regalos">
+        <h2 class="dress-title">DRESS CODE</h2>
+        <p class="dress-style">ELEGANTE</p>
+        <p class="dress-note">NO utilizar blanco, ni color<br />parecido como el crema o beige</p>
+        <img class="dress-image" src="assets/dresscode.png" alt="Ilustración de vestimenta formal" width="79" height="101" loading="lazy" />
+
+        <h2 class="gift-title">MESA DE REGALOS</h2>
+        <p class="gift-copy">Nuestro mejor regalo es tu presencia en este momento importante, pero si deseas contribuir a nuestro proyecto de vida, lo apreciaremos.</p>
+        <div class="bank-details" role="group" aria-label="Datos para mesa de regalos">
+          <p class="bank-heading">CUENTA BANCARIA</p>
+          <p class="bank-account bank-account-first">N. cta BCP<br /><span class="numeric">1945678912345</span><br />CCI <span class="numeric">00219456789123456789</span></p>
+          <p class="bank-account bank-account-second">N. cta BBVA<br /><span class="numeric">0011-0150-0200055207</span><br />CCI <span class="numeric">01101500002000552070</span></p>
+        </div>
+      </section>
+
+      <section class="reference-page consideration-page" id="confirmacion" aria-label="Información y confirmación de asistencia">
+        <img class="small-logo page-logo-right" src="assets/logo-bienvenida-compacto.png" alt="Monograma J y F" />
+        <div class="consideration-copy">
+          <h2>TOMALO EN CUENTA</h2>
+          <p class="children-heading">SI A LOS NIÑOS. SI A LAS RISAS. SI A LA FIESTA EN FAMILIA</p>
+          <p class="children-copy">Porque nuestros hijos y los vuestros son parte de esta historia, queremos que todos disfruten con nosotros.</p>
+
+          <h2 class="confirm-title">CONFIRMAR ASISTENCIA</h2>
+          <p class="confirm-copy">Este es un día especial para nosotros y más aún si estás presente, por eso te pedimos que nos hagas saber si asistirás con previo aviso.<br />Hasta el <span class="numeric">1</span> de Diciembre puedes confirmar tu asistencia mediante este formulario:</p>
+          <p class="closing-line">¡¡Te esperamos!!</p>
+
+          <form class="rsvp-form" id="rsvp-form">
+            <p class="rsvp-intro">Nos encantará compartir este día contigo. Cuéntanos si podrás venir y así dejamos todo preparado.</p>
+
+            <div class="rsvp-field">
+              <label for="rsvp-name">Tu nombre y apellido <span aria-hidden="true">*</span></label>
+              <input id="rsvp-name" name="name" type="text" autocomplete="name" placeholder="Nombre y apellido" required />
+            </div>
+
+            <fieldset class="rsvp-attendance">
+              <legend>¿Podrás acompañarnos? <span aria-hidden="true">*</span></legend>
+              <div class="rsvp-options">
+                <label class="rsvp-choice"><input type="radio" name="attendance" value="yes" required /><span>Sí, ahí estaré</span></label>
+                <label class="rsvp-choice"><input type="radio" name="attendance" value="no" required /><span>Lo siento, no podré</span></label>
+              </div>
+            </fieldset>
+
+            <div class="rsvp-details" id="rsvp-guest-details" aria-disabled="true">
+              <div class="rsvp-field">
+                <label for="rsvp-count">¿Cuántas personas asistirán?</label>
+                <select id="rsvp-count" name="guestCount" disabled>
+                  <option value="1">1 persona</option>
+                  <option value="2">2 personas</option>
+                  <option value="3">3 personas</option>
+                  <option value="4">4 personas</option>
+                </select>
+              </div>
+              <div class="rsvp-field">
+                <label for="rsvp-companion">Nombre y apellido de tu acompañante <span class="companion-required" id="companion-required" aria-hidden="true" hidden>*</span></label>
+                <input id="rsvp-companion" name="companion" type="text" placeholder="Nombre y apellido" disabled />
+              </div>
+              <div class="rsvp-field rsvp-field-wide">
+                <label for="rsvp-allergies">Alergias o restricciones alimentarias</label>
+                <textarea id="rsvp-allergies" name="allergies" rows="3" placeholder="Si corresponde, indica quién tiene la alergia y a qué alimento." disabled></textarea>
+                <small>Si no tienes ninguna, puedes dejarlo en blanco.</small>
+              </div>
+            </div>
+
+            <div class="rsvp-field rsvp-comment-field">
+              <label for="rsvp-comment">Comentario (opcional)</label>
+              <textarea id="rsvp-comment" name="comment" rows="4" placeholder="Si quieres dejarnos unas palabras..."></textarea>
+            </div>
+
+            <button class="rsvp-submit" type="submit">Enviar respuesta <span aria-hidden="true">↗</span></button>
+            <p class="rsvp-note">Usaremos estos datos solo para organizar la celebración.</p>
+            <p class="rsvp-status" id="rsvp-status" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
